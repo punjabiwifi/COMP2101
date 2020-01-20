@@ -30,11 +30,16 @@ echo "Setgid files:"
 echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 4
 #Only change required is to change the permissions to 2000 in order to identify the the setgid files and to chanage the column from 3
-# to 4 in order to sort it correcly
+# to 4 in order to sort it correctly
 echo ""
 
 #Task3
 echo "10 Largest Files in the System:"
 echo "============="
 find / -type f -exec /bin/ls --block-size=M -l 2>/dev/null {} \; | sort -k 4 | head -n 10 | awk '{print $3,$5,$9}'
+# / refers to the path from where the find command starts
+#type f refers to a regular files
+#-exec stands for the execute command and it will execute the ls command and append all the files found in the {}
+#sort uses the 4th line to sort the found Files
+#awk command helps showing the 3rd, 5th and the 9th line which corresponds to the owner, size and filename respectively.
 #awk working with the print command added, otherwise shows error.
