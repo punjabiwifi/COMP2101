@@ -19,13 +19,22 @@
 # use the find command to generate the list of files with their sizes, with an error redirect to /dev/null
 # use cut or awk to display only the output desired
 
+#Task1
 echo "Setuid files:"
 echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 3
 echo ""
 
+#Task2
 echo "Setgid files:"
 echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 4
+#Only change required is to change the permissions to 2000 in order to identify the the setgid files and to chanage the column from 3
+# to 4 in order to sort it correcly
 echo ""
 
+#Task3
+echo "10 Largest Files in the System:"
+echo "============="
+find / -type f -exec /bin/ls --block-size=M -l 2>/dev/null {} \; | sort -k 4 | head -n 10 | awk '{print $3,$5,$9}'
+#awk working with the print command added, otherwise shows error.
