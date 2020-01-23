@@ -22,8 +22,31 @@ die2=$(( RANDOM % 6 + 1 ))
 # display the results
 echo "Rolled $die1, $die2"
 
-
-#Putting the number of sides in a variables
+##################################
+#Task1
+##################################
+#Putting the number of sides and the bias in variables
 range=6
 bias=1
-$((RANDOM % range + bias))
+die1=$((RANDOM % range + bias))
+die2=$((RANDOM % range +bias))
+
+
+
+##################################
+#Task2
+##################################
+#sum generation
+sum=$((die1+die2))
+
+#average generation
+average=$((sum/2))
+
+##################################
+#summary generation
+##################################
+echo "Rolling pair of dice with 9 faces i.e. same as the number of letters in my name,
+die1 = $die1,
+die2 = $die2,
+sum of dice = $sum,
+average of dice = $average"
