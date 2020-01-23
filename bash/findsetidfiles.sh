@@ -36,7 +36,7 @@ echo ""
 #Task3
 echo "10 Largest Files in the System:"
 echo "============="
-find / -type f -exec /bin/ls --block-size=M -l 2>/dev/null {} \; | sort -k 4 | head -n 10 | awk '{print $3,$5,$9}'
+find / -type f -exec /bin/ls --block-size=M -l 2>/dev/null {} \; | sort -nrk 5 | head -n 10 | awk '{print $3,$5,$9}'
 # / refers to the path from where the find command starts
 #type f refers to a regular files
 #-exec stands for the execute command and it will execute the ls command and append all the files found in the {}
