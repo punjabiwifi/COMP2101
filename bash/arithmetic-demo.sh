@@ -15,6 +15,10 @@ sum=$((myvar1 + myvar2 + myvar3 ))
 product=$((myvar1*myvar2*myvar3))
 
 cat <<EOF
+################
+#Addition
 $myvar1 plus $myvar2 plus $myvar3 is $sum
+################
+#Multiplication
 $myvar1 multiplied by $myvar2 multiplied by $myvar3 is $product
 EOF
