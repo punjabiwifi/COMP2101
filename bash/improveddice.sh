@@ -49,4 +49,4 @@ echo "Rolling pair of dice with 9 faces i.e. same as the number of letters in my
 die1 = $die1,
 die2 = $die2,
 sum of dice = $sum,
-average of dice = $average"
+average of dice (approximated by defect)= $average"
