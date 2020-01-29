@@ -41,5 +41,8 @@ test -f ~/Pictures/pics.tgz && tar -xf ~/Pictures/pics.tgz -C  ~/Pictures  && rm
 #summarize and report
 test -d ~/Pictures && cat <<EOF
 Found $(find ~/Pictures -type f|wc -l) files in the Pictures directory.
-The Pictures directory uses $(du -sh ~/Pictures|awk '{print $1}') space on the disk.
+Specifically the catfiles subdirectory has  $(find ~/Pictures/catfiles -type f | wc -l) files
+While the whoisit subdirectory has  $(find ~/Pictures/whoisit -type f | wc -l) files
+And the pics subdirectory has  $(find ~/Pictures/pics -type f | wc -l) files
+In total the Pictures directory uses $(du -sh ~/Pictures|awk '{print $1}') space on the disk.
 EOF
