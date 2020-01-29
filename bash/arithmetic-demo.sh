@@ -11,7 +11,7 @@ read -p "Please enter the first number - " myvar1
 read -p "Please enter the second number - " myvar2
 read -p "Please enter the third number - " myvar3
 
-sum=$((myvar1 + myvar2 + myvar3 ))
+sum=$((myvar1+myvar2+myvar3 ))
 product=$((myvar1*myvar2*myvar3))
 
 cat <<EOF
