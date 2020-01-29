@@ -23,8 +23,9 @@ $(( RANDOM % 20 +1)) rolled
 "
 
 
-#Dice that rolls as many letters in my first name, my name is Lovepreet
+#Roll that many dice as the letters in my first name, my name is Lovepreet
 echo "
-Rolling dice with 9 faces...
-$(( RANDOM % 9 +1)) rolled
+Rolling 9 dices at the same time ...
+The respective outcomes are as follows:
+$(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1)) $(( RANDOM % 6 +1))
 "
