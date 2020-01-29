@@ -32,10 +32,10 @@ test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o -q ~/Pictures/pics.zip && 
 ########################
 
 #Download the tarfile if we need it
-test -f ~/Pictures/pics.tgz || wget -q -O ~/Pictures/pics.zip http://zonzorp.net/pics.tgz
+test -f ~/Pictures/pics.tgz || wget -q -O ~/Pictures/pics.tgz http://zonzorp.net/pics.tgz
 
 # unpack the tarfile and remove it if successful
-test -f ~/Pictures/pics.tgz && tar -x -C  ~/Pictures  && rm ~/Pictures/pics.tgz
+test -f ~/Pictures/pics.tgz && tar -xf ~/Pictures/pics.tgz -C  ~/Pictures  && rm ~/Pictures/pics.tgz
 
 ########################
 #summarize and report
