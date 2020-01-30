@@ -25,9 +25,6 @@ cday=$(date +"%A")
 
 
 
-
-
-
 cat <<EOF
 
 Welcome to planet "$(hostname)" "$title $user!"
