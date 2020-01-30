@@ -17,33 +17,13 @@
 ###############
 # Variables   #
 ###############
-title="Overlord"
 user="Lovepreet"
 hostname=(hostname)
 now=$(date +"%A at %H:%M %p")
 cday=$(date +"%A")
-if [[ $cday=="Monday" ]]; then
-  #statements
-  title="Positive"
-elif [[ $cday=="Tuesday" ]]; then
-  #statements
-  title="Negative"
-elif [[ $cday=="Wednesday" ]]; then
-  #statements
-  title="Colorful"
-elif [[ $cday=="Thursday" ]]; then
-  #statements
-  title="Stranger"
-elif [[ $cday=="Friday" ]]; then
-  #statements
-  title="Optimum"
-elif [[ $cday=="Saturday" ]]; then
-  #statements
-  title="Black and White"
-elif [[ $cday=="Sunday" ]]; then
-  #statements
-  title="Sunnyful"
-fi
+
+
+
 
 
 
