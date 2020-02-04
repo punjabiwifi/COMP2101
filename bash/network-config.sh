@@ -42,15 +42,15 @@ External_IP=$(curl -s icanhazip.com)
 External_Name=$(getent hosts $(curl -s icanhazip.com) | awk '{print $2}')
 #Install net-tools to make the commands work
 Router_Hostname=$(route | grep "default" | awk '{print $1}')
-Router_Address=$(route -n| grep "default" | awk '{print $2}')
+Router_Address=$(route -n| grep "UG" | awk '{print $2}')
 
 
 cat <<EOF
-$hostname
-$LAN_Address
-$LAN_Hostname
-$External_IP
-$External_Name
-$Router_Hostname
-$Router_Address
+Hostname          :$hostname
+LAN Address       :$LAN_Address
+LAN Hostname      :$LAN_Hostname
+External IP       :$External_IP
+External IP       :$External_Name
+Router Hostname   :$Router_Hostname
+Router Address    :$Router_Address
 EOF
