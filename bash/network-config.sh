@@ -41,7 +41,7 @@ LAN_Hostname=$(getent hosts $(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}')
 External_IP=$(curl -s icanhazip.com)
 External_Name=$(getent hosts $(curl -s icanhazip.com) | awk '{print $2}')
 #Install net-tools to make the commands work
-Router_Hostname=$(route | grep "default" | awk '{print $1}')
+Router_Hostname=$(route | grep "default" | awk '{print $2}')
 Router_Address=$(route -n| grep "UG" | awk '{print $2}')
 
 
