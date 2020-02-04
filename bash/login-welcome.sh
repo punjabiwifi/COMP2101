@@ -17,15 +17,17 @@
 ###############
 # Variables   #
 ###############
-title="Overlord"
-myname="dennis"
-hostname="myhostname"
-
-###############
-# Main        #
-###############
+user="Lovepreet"
+hostname=(hostname)
+now=$(date +"%A at %H:%M %p")
+cday=$(date +"%A")
+#This will help us in creating the same output as shown in the text
+spacer=\"
+var="Welcome to planet "$spacer$(hostname)$spacer$spacer$title$user"!"$spacer"It is "$now
+cowsay $var
 cat <<EOF
 
-Welcome to planet $hostname, "$title $myname!"
+Welcome to planet "$(hostname)""$title$user!"
+It is $now
 
 EOF
