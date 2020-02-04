@@ -32,3 +32,25 @@ else
     if [[ $myString = $referenceString ]]; then
       #statements
       echo "Correct!"
+    else
+      echo "The password is Incorrect"
+      read -p "Please re-enter the password - " myString
+      if [[ $myString = $referenceString ]]; then
+        #statements
+        echo "Correct!"
+      else
+        echo "The password is Incorrect"
+        read -p "Please re-enter the password - " myString
+        if [[ $myString = $referenceString ]]; then
+          #statements
+          echo "Correct"
+        else
+          echo "Sorry, this was the last time"
+        fi
+
+      fi
+    fi
+  fi
+
+
+fi
