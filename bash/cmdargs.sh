@@ -10,7 +10,7 @@ while [ $# -gt 0 ]; do
   # add whatever is in $1 to the myargs array
   myargs+=("$1")
   # tell the user what we did
-  echo "Added \'$1\' to the arguments array"
+  echo "Added $1 to the arguments array"
 
 # TASK 1: instead of just adding arguments to an array, use a case statement to recognize some options
 #          Options to recognize: -h for help, -v for verbose mode, -d N for debug mode with N being a single digit number
