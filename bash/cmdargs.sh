@@ -28,6 +28,7 @@ while [ $# -gt 0 ]; do
     ;;
     -v )
     echo '"-v" has been added for verbose'
+    shift
     ;;
     -d )
       case "$2" in
@@ -39,14 +40,16 @@ while [ $# -gt 0 ]; do
         echo "A single digit number must follow the -d option [0-9]. "
         shift
       esac
+      shift
     ;;
     *)
     errors=$1
     echo "Unknown value error : $errors"
+    shift
 
 
     ;;
-    esac
+esac
 done
 echo "Done"
 # each time through the loop, shift the arguments left
