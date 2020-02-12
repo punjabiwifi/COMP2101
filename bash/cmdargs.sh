@@ -24,6 +24,7 @@ while [ $# -gt 0 ]; do
   case $1 in
     -h )
     echo '"-h" has been added for help'
+    exit
     ;;
     -v )
     echo '"-v" has been added for verbose'
