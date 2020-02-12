@@ -20,17 +20,49 @@ while [ $# -gt 0 ]; do
 #             display an error if the user gave the -d option without a single digit number after it
 #          Anything that wasn't recognized on the command line should still go into the myargs array
 
-  # each time through the loop, shift the arguments left
-  # this decrements the argument count for us
-  shift
-  # tell the user we shifted things
-  echo "Shifted command line, leaving $# things left to process."
-  echo "--------------------------"
-  # go back to the top of the loop to see if anything is left to work on
+
+  case $1 in
+    -h )
+    echo '"-h" has been added for help'
+    ;;
+    -v )
+    echo '"-v" has been added for verbose'
+    ;;
+    -d )
+      case "$2" in
+        [0-9] )
+        echo "-d has been added for the debug value $2"
+        shift
+        ;;
+        *)
+        echo "A single digit number must follow the -d option [0-9]. "
+        shift
+      esac
+    ;;
+    *)
+    errors=$1
+    echo "Unknown value error : $errors"
+
+
+    ;;
+    esac
 done
 echo "Done"
+# each time through the loop, shift the arguments left
+# this decrements the argument count for us
+shift
+# tell the user we shifted things
+echo "Shifted command line, leaving $# things left to process."
+echo "--------------------------"
+# go back to the top of the loop to see if anything is left to work on
 
 # TASK2: display the settings and myargs contents
 #         Tell the user if vebose mode is on
 #         Tell the user if debug mode is on and if it is, what number it is set to
 #         Print out the myargs array with a label
+
+####verbose mode has been inserted in task1 (check -v)
+####debug mode hs also been added to the task 1 ( check -d )
+
+
+echo ${myargs[*]}
