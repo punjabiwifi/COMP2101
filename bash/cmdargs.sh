@@ -34,11 +34,14 @@ while [ $# -gt 0 ]; do
       case "$2" in
         [0-9] )
         echo "-d has been added for the debug value $2"
+        myargs+=(" $2")
         shift
         ;;
         *)
         echo "A single digit number must follow the -d option [0-9]. "
+        myargs+=(" $2")
         shift
+
       esac
       shift
     ;;
