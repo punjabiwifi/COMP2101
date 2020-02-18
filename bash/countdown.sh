@@ -12,7 +12,7 @@
 trap quitter 2
 trap secretsearcher 3
 function secretsearcher {
-
+  sleepCount=0
   doCountdown | dialog --gauge "The way to exit the script has been found" 7 60
 
   exit
@@ -105,8 +105,6 @@ sleepCount=$numberOfSleeps
 function quitter {
   doCountdown | dialog --gauge "Operation Failed! Countdown cannot be interrupted" 7 60
 }
-
-
 doCountdown|dialog --gauge "Remaining Time" 7 60
 stty sane
 
