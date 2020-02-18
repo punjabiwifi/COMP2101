@@ -77,8 +77,8 @@ echo "--------------------------"
 #-------------------------TASK2------------------------------
 echo  ${myargs[*]}
 
-echo "The array contains the argument :"
-echo " ${myargs[*]}"
+echo " ${myargs[*]}" "This argument is contained in the array :"
+
 
 
 
@@ -89,7 +89,7 @@ case  "$on_mode" in
    ;;
    2)
    #         The number of the debug mode if and only if it is on
-   echo "Debug mode enabled with the follwing number "${myargs[1]}
+   echo ${myargs[1]}, "Debug mode enabled with the this number "
 
   ;;
 esac
