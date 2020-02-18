@@ -28,12 +28,14 @@ while [ $# -gt 0 ]; do
     ;;
     -v )
     echo '"-v" has been added for verbose'
+    on_mode=1
     shift
     ;;
     -d )
       case "$2" in
         [0-9] )
         echo "-d has been added for the debug value $2"
+        on_mode=2
         myargs+=(" $2")
         shift
         ;;
@@ -71,5 +73,23 @@ echo "--------------------------"
 ####verbose mode has been inserted in task1 (check -v)
 ####debug mode hs also been added to the task 1 ( check -d )
 
+##################################################################################
+#-------------------------TASK2------------------------------
+echo  ${myargs[*]}
 
-echo ${myargs[*]}
+echo "The array contains the argument :"
+echo " ${myargs[*]}"
+
+
+
+    #        The verbose mode is on
+case  "$on_mode" in
+    1)
+   echo 'verbose is enabled'
+   ;;
+   2)
+   #         The number of the debug mode if and only if it is on
+   echo "Debug mode enabled with the follwing number "${myargs[1]}
+
+  ;;
+esac
